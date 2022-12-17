@@ -4,11 +4,14 @@ from DeepPurpose import utils
 from tdc.single_pred import ADME
 
 
+_DEEPPURPOSE_MODELS = ['Transformer', 'DGL_GCN']
+
+
 def prepare_dataset(dataset_name, model_name):
     data = ADME(name=dataset_name)
     X, y = data.get_data(format = 'DeepPurpose')
 
-    if model_name in ['Transformer', 'DGL_GCN']:
+    if model_name in _DEEPPURPOSE_MODELS:
         train, val, test = utils.data_process(
             X_drug = X, 
             y = y, 

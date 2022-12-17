@@ -25,10 +25,6 @@ class TreeModel():
         model_path = os.path.join(model_dir, 'model.joblib')
         joblib.dump(self.model, model_path)
 
-    def model_pretrained(self, model_dir):
-        path = os.path.join(model_dir, 'model.joblib')
-        self.model = joblib.load(path)
-
     def predict(self, dataset):
         """
         Return probability of class 1.
@@ -37,3 +33,10 @@ class TreeModel():
 
         pred_y_proba = self.model.predict_proba(test_X)[:, 1]
         return pred_y_proba
+
+
+def model_pretrained(model_dir):
+    path = os.path.join(model_dir, 'model.joblib')
+    model = TreeModel()
+    model.model = joblib.load(path)
+    return model
