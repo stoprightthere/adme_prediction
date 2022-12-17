@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeClassifier
 class TreeModel():
     def __init__(self, **model_kwargs):
         """
-        Wrapper around DecisionTreeClassifier to conform to DeepPurpose's interface
+        Wrapper around DecisionTreeClassifier to conform to DeepPurpose's interface.
         """
         self.model = DecisionTreeClassifier(**model_kwargs)
 

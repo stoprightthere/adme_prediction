@@ -1,0 +1,7 @@
+rdkit
+git+https://github.com/bp-kelley/descriptastorus
+DeepPurpose
+pytdc
+tabulate
+matplotlib
+dgl
