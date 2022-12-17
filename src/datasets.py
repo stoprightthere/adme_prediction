@@ -15,11 +15,11 @@ def prepare_dataset(dataset_name, model_name):
             drug_encoding = model_name,
             random_seed = 'TDC',
         )
-    elif model == 'tree':
+    elif model_name == 'tree':
         df = pd.DataFrame(zip(X, y))
         df.rename(columns={0: 'SMILES', 1: 'Label'}, inplace=True)
         df = utils.encode_drug(df, 'Pubchem')
-        train, val, test = utils.create_fold(df, random_seed=1234, frac=[0.7, 0.1, 0.2])
+        train, val, test = utils.create_fold(df, fold_seed=1234, frac=[0.7, 0.1, 0.2])
     else:
         raise ValueError(f'Unknown model {model_name}')
 

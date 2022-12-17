@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import sklearn
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import roc_auc_score, average_precision_score, f1_score
+
 
 class TreeModel():
     def __init__(self, **model_kwargs):
@@ -31,18 +31,9 @@ class TreeModel():
 
     def predict(self, dataset):
         """
-        Actually, compute ROC-AUC, Average precision, and F1 on a test dataset. True labels are required.
-
-        The naming conforms to DeepPurpose's interface.
+        Return probability of class 1.
         """
         test_X = np.stack(dataset['drug_encoding'], axis=0)
-        test_y = dataset['Label']
 
-        pred_y_proba = self.model.predict_proba(test_X)
-        pred_y = self.model.predict(test_X)
-
-        roc_auc = roc_auc_score(test_y, pred_y_proba)
-        ap_score = average_prediction_score(test_y, pred_y)
-        f1 = f1_score(test_y, pred_y)
-
-        return roc_auc, ap_score, f1, pred_y
+        pred_y_proba = self.model.predict_proba(test_X)[:, 1]
+        return pred_y_proba
