@@ -13,7 +13,7 @@ def prepare_dataset(dataset_name, model_name):
         split the dataset into train, validation, and test sub-datasets.
 
     :param dataset_name: name of the dataset on the TDC.
-    :param model_name:  either 'Transformer', 'DGL_GCN' (Graph Convolution Network) or 'tree' (decistion tree model).
+    :param model_name:  either 'Transformer', 'DGL_GCN' (Graph Convolution Network) or 'tree' (decision tree model).
 
     :return: (train, val, test) datasets.
     """
