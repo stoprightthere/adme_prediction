@@ -33,7 +33,7 @@ For the sake of simplicity, neural network models are trained for 100 epochs, wi
 The problem took me basically a day. 
 
 ## What could have been done
-It would be better to train for more epochs and choose hyperparameters in a principled way, like via cross-validation or using Bayesian hyperparameter tuning.
+It would be better to train better (like, for more epochs/until convergence) and choose hyperparameters in a principled way, like via cross-validation or using Bayesian hyperparameter tuning.
 
 One could also include regression-type datasets. It would only require small code modifications (like, using a tree regressor instead of a classifier) and using appropriate metrics. 
 
