@@ -15,4 +15,4 @@ Trained models were evaluated on held-out datasets via AUC-ROC score and F1 scor
 | Graph NN    | 0.824711 | 0.838888 |
 | Transformer | 0.711308 | 0.815738 |
 
-The higher the value, the better is the model's performance. As is seen, Graph NN model consistently outperforms both classical tree model and transformer model.
+The higher the value, the better is the model's performance. As is seen, Graph NN model consistently outperforms both the classical tree model and the transformer model.
