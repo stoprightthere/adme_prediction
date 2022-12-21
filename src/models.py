@@ -10,7 +10,7 @@ _DEEPPURPOSE_MODELS = ['Transformer', 'DGL_GCN']
 
 def get_model(model_name, **model_kwargs):
     """
-    Get a model to be trained. 
+    Get a model to be trained.
 
     :param model_name: either 'Transformer', 'DGL_GCN' (Graph Convolution Network) or 'tree' (decision tree model).
     :param **model_kwargs: model parameters.
@@ -26,8 +26,8 @@ def get_model(model_name, **model_kwargs):
         return model
     else:
         raise ValueError(f'Unknown model {model_name}')
-        
-        
+
+
 def load_pretrained(model_name, model_dir):
     """
     Load pretrained model from disk.
@@ -44,4 +44,3 @@ def load_pretrained(model_name, model_dir):
     else:
         raise ValueError(f'Unknown model {model_name}')
     return model
-                             
