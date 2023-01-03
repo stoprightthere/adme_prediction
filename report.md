@@ -11,7 +11,7 @@ Trained models were evaluated on held-out datasets via AUC-ROC score and F1 scor
 
 |             | Mean AUC |  Mean F1 |
 |:------------|---------:|---------:|
-| Tree model  | 0.673094 | 0.797653 |
+| Tree model  | 0.753438 | 0.813756 |
 | Graph NN    | 0.824711 | 0.838888 |
 | Transformer | 0.711308 | 0.815738 |
 

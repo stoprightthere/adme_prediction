@@ -2,11 +2,10 @@ import os
 
 import joblib
 import numpy as np
-import sklearn
 from sklearn.tree import DecisionTreeClassifier
 
 
-class TreeModel():
+class TreeModel:
     def __init__(self, **model_kwargs):
         """
         Wrapper around DecisionTreeClassifier to conform to DeepPurpose's interface.
